@@ -1,7 +1,7 @@
 @import "../../node_modules/tailwindcss";
 
 :root {
-  --background: #ffffff;
+  --background-dark: #000319;
   --foreground: #171717;
 }
 
@@ -20,7 +20,7 @@
 }
 
 body {
-  background: var(--background);
+  background: var(--background-dark);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }

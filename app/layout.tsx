@@ -1,7 +1,5 @@
 import './styles/globals.css';
-import {ThemeProvider} from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
-import theme from '../theme';
+import MUIProvider from "./MUIProvider";
 
 export const metadata = {
     title      : 'Meine Next.js Website',
@@ -14,11 +12,10 @@ export default function RootLayout({
     children: React.ReactNode
 }) {
     return (
-        <html lang="de">
-        <ThemeProvider theme={theme}>
-            <CssBaseline/>
-            <body>{children}</body>
-        </ThemeProvider>
+        <html lang="de" suppressHydrationWarning>
+        <body>
+        <MUIProvider>{children}</MUIProvider>
+        </body>
         </html>
     )
 }
