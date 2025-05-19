@@ -1,6 +1,22 @@
 import {createTheme, ThemeOptions} from '@mui/material/styles';
 import React from "react";
 
+import {
+    ibmPlexMonoRegular,
+    ibmPlexMonoItalic,
+    ibmPlexMonoLight,
+    ibmPlexMonoLightItalic,
+    ibmPlexMonoMedium,
+    ibmPlexMonoMediumItalic,
+    ibmPlexMonoSemiBold,
+    ibmPlexMonoSemiBoldItalic,
+    ibmPlexMonoBold,
+    ibmPlexMonoBoldItalic,
+    ibmPlexMonoExtraLight,
+    ibmPlexMonoExtraLightItalic,
+    ibmPlexMonoThin,
+    ibmPlexMonoThinItalic
+} from './public/fonts';
 
 // Erweitern Sie den Theme-Typ
 declare module '@mui/material/styles' {
@@ -11,9 +27,6 @@ declare module '@mui/material/styles' {
             }
 
         }
-        border: {
-            main: string,
-        }
     }
 
     interface ThemeOptions {
@@ -22,29 +35,141 @@ declare module '@mui/material/styles' {
                 light?: React.CSSProperties;
             }
         }
-        border?: {
-            main?: string;
-        }
     }
 
 
 }
 
 const theme = createTheme({
-    palette   : {
+    breakpoints: {
+        values: {
+            xs: 0,
+            sm: 372,
+            md: 743,
+            lg: 1084,
+            xl: 1400,
+        },
+    },
+    components : {
+
+        MuiContainer: {
+            styleOverrides: {
+                root: {},
+            },
+        },
+        // Name of the component
+        MuiButton   : {
+            styleOverrides: {
+                // Name of the slot
+                root: {
+                    // Some CSS
+                    fontSize       : '1rem',
+                    fontWeight     : "bold",
+                    lineHeight     : 1,
+                    letterSpacing  : "20%",
+                    backgroundColor: '#BE16CF',
+                    color          : '#fff',
+                    borderRadius   : "80px",
+                    width          : 'fit-content',
+                    padding        : '12px 32px',
+
+                },
+            },
+        },
+        MuiTextField: {
+            styleOverrides: {
+                root: {
+                    '& .MuiOutlinedInput-root': {
+                        '& fieldset'            : {
+                            borderColor: '#363749',
+                            borderWidth: "1px",
+                        },
+                        '&:hover fieldset'      : {
+                            borderColor: '#363749',
+                            borderWidth: "1px"
+                        },
+                        '&.Mui-focused fieldset': {
+                            borderColor: '#363749',
+                            borderWidth: "1px"
+
+                        },
+                    },
+                    '& .MuiInputLabel-root'   : {
+                        color: '#655E7B',
+                    },
+                    '& .MuiInputBase-input'   : {
+                        color  : '#655E7B',
+                        padding: '12px 8px',
+                    },
+
+                    '& .MuiInputBase-root': {
+                        padding: 0,
+
+                    },
+                    backgroundColor       : 'rgba(4, 7, 29, 0.49)',
+                    borderRadius          : '4px',
+                    fontSize              : '1rem',
+                    marginBlock           : '4px',
+                },
+            },
+        },
+        MuiTabs     : {
+            styleOverrides: {
+                root     : {
+                    fontSize     : '1.125rem',
+                    fontWeight   : "light",
+                    color        : "#414353",
+                    lineHeight   : 1,
+                    textTransform: 'none',
+
+                    '&.Mui-selected': {
+                        fontWeight: 600,
+                        color     : '#E4ECFF',
+                    }
+                },
+                indicator: {
+                    backgroundColor: '#414353',
+                },
+            },
+        },
+        MuiTab      : {
+            styleOverrides: {
+                root     : {
+                    padding      : '0 16px',
+                    fontSize     : '1.125rem',
+                    fontWeight   : "light",
+                    width        : "100%",
+                    color        : "#414353",
+                    lineHeight   : 1,
+                    textTransform: 'none',
+
+                    '&.Mui-selected': {
+                        fontWeight: "light",
+                        color     : '#E4ECFF',
+                    }
+                },
+                indicator: {
+                    backgroundColor: '#414353',
+                },
+            },
+        }
+    },
+    palette    : {
         primary   : {
-            main: '#1976d2',
+            main: '#BE16CF',
         },
         secondary : {
-            main: '#dc004e',
+            main : '#dc004e',
+            light: "#E4ECFF",
         },
         background: {
             default: '#000319',
             paper  : 'linear-gradient(135deg,rgba(4, 7, 29, 0.49) 0%, rgba(12, 14, 35, 1) 100%)',
         },
+        divider   : '#363749'
     },
-    typography: {
-        fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',
+    typography : {
+        fontFamily: ibmPlexMonoRegular.style.fontFamily,
         h1        : {
             fontSize  : '2.5rem',
             fontWeight: 500,
@@ -55,13 +180,14 @@ const theme = createTheme({
         },
         body1     : {
             fontSize: '1rem',
+            fontWeight: 'light',
         },
 
     },
 
     shape: {
         borderRadius: 4,
-},
+    },
 
     text: {
         large: {
@@ -70,10 +196,6 @@ const theme = createTheme({
                 fontWeight: 300,
             }
         }
-    },
-
-    border: {
-        main: 'linear-gradient(176deg,rgba(54, 55, 73, 0.43) 0%, rgba(54, 55, 73, 0.49) 100%)',
     }
 } as ThemeOptions);
 

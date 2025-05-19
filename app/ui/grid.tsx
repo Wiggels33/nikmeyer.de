@@ -23,7 +23,15 @@ const Grid = ({children}: IGridProps) => {
         <div className="grid grid-cols-4 grid-rows-[repeat(4,220px)] gap-6 grid-temp-rows-8">
             {React.Children.map(children, (child, index) => (
                 <>
-                    <Container component={"section"} sx={{gridArea: gridAreas[index], height: '100%'}}>
+                    <Container
+                        disableGutters
+                        component={"section"}
+                        sx={{
+                            gridArea: gridAreas[index],
+                            height  : '100%',
+                            minWidth : '324px',
+                            padding: 0
+                        }}>
                         {child}
                     </Container>
                 </>
