@@ -171,15 +171,20 @@ const theme = createTheme({
     typography : {
         fontFamily: ibmPlexMonoRegular.style.fontFamily,
         h1        : {
-            fontSize  : '2.5rem',
-            fontWeight: 500,
+            fontFamily   : ibmPlexMonoBold.style.fontFamily,
+            fontSize     : '8rem',
+            letterSpacing: "6%",
         },
         h2        : {
-            fontSize  : '2rem',
-            fontWeight: 500,
+            fontFamily: ibmPlexMonoBold.style.fontFamily,
+            fontSize  : '3rem',
+        },
+        h3        : {
+            fontFamily: ibmPlexMonoBold.style.fontFamily,
+            fontSize  : "2rem",
         },
         body1     : {
-            fontSize: '1rem',
+            fontSize  : '1rem',
             fontWeight: 'light',
         },
 

@@ -114,7 +114,6 @@ const ContactSection = () => {
                         fullWidth
                         variant="contained"
                         sx={{mt: 3, mb: 2}}
-                        onSubmit={handleSubmit}
                     >
                         Send
                     </Button>
