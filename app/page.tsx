@@ -18,10 +18,10 @@ export default function () {
                 <ContactSection/>
                 <FromSection/>
                 <CvSection />
-                <AboutSection/>
-                <HeroSection/>
                 <ProjectSection/>
+                <HeroSection/>
                 <NewsSection/>
+                <AboutSection/>
                 <CustomerSection/>
                 <TechStackSection/>
                 <FooterSection/>

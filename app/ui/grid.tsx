@@ -1,6 +1,7 @@
 'use client';
 import React, {ReactNode} from "react";
-import {Container} from "@mui/material";
+import {Box, Container} from "@mui/material";
+import theme from "../../theme";
 
 interface IGridProps {
     children: ReactNode[];
@@ -20,7 +21,7 @@ const Grid = ({children}: IGridProps) => {
     ];
 
     return (
-        <div className="grid grid-cols-4 grid-rows-[repeat(4,220px)] gap-6 grid-temp-rows-8">
+        <Box className={"grid grid-cols-4 grid-rows-[repeat(4,220px)] gap-6 grid-temp-rows-8 xl:min-w-[1440px]"}>
             {React.Children.map(children, (child, index) => (
                 <>
                     <Container
@@ -36,7 +37,7 @@ const Grid = ({children}: IGridProps) => {
                     </Container>
                 </>
             ))}
-        </div>
+        </Box>
     );
 }
 

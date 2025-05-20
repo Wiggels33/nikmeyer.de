@@ -178,7 +178,7 @@ const theme = createTheme({
         h2        : {
             fontFamily: ibmPlexMonoBold.style.fontFamily,
             fontSize  : '2.5rem',
-            letterSpacing: "6%",
+            letterSpacing: "6",
         },
         h3        : {
             fontFamily: ibmPlexMonoBold.style.fontFamily,
