@@ -2,7 +2,7 @@
 import React from 'react';
 import {Container} from "@mui/material";
 
-const FromSection = () => {
+const FooterSection = () => {
     return (
             <Container>
                 <h2>Form Section</h2>
@@ -10,4 +10,4 @@ const FromSection = () => {
     );
 };
 
-export default FromSection;
+export default FooterSection;

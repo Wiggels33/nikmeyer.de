@@ -1,7 +1,7 @@
 'use client';
 import Grid from "./ui/grid";
 import ContactSection from "./sections/contactSection";
-import FromSection from "./sections/footerSection";
+import FromSection from "./sections/fromSection";
 import AboutSection from "./sections/aboutSection";
 import ProjectSection from "./sections/projectSection";
 import HeroSection from "./sections/heroSection";
@@ -9,6 +9,7 @@ import NewsSection from "./sections/newsSection";
 import CustomerSection from "./sections/customersSection";
 import FooterSection from "./sections/footerSection";
 import TechStackSection from "./sections/techStackSection";
+import CvSection from "./sections/cvSection";
 
 export default function () {
     return (
@@ -16,9 +17,10 @@ export default function () {
             <Grid>
                 <ContactSection/>
                 <FromSection/>
+                <CvSection />
                 <AboutSection/>
-                <ProjectSection/>
                 <HeroSection/>
+                <ProjectSection/>
                 <NewsSection/>
                 <CustomerSection/>
                 <TechStackSection/>
