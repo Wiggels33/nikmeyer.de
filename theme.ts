@@ -184,6 +184,10 @@ const theme = createTheme({
             fontFamily: ibmPlexMonoBold.style.fontFamily,
             fontSize  : "2rem",
         },
+        h4        : {
+            fontFamily: ibmPlexMonoBold.style.fontFamily,
+            fontSize  : '1.25rem',
+        },
         body1     : {
             fontSize  : '1rem',
             fontWeight: 'light',
