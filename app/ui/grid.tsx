@@ -21,7 +21,7 @@ const Grid = ({children}: IGridProps) => {
     ];
 
     return (
-        <Box className={"grid grid-cols-4 grid-rows-[repeat(4,220px)] gap-6 grid-temp-rows-8 xl:min-w-[1440px]"}>
+        <Box className={"grid grid-cols-4 grid-rows-[repeat(4,220px)] gap-6 grid-temp-rows-8 xl:min-w-[100%]"}>
             {React.Children.map(children, (child, index) => (
                 <>
                     <Container

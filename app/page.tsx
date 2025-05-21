@@ -2,7 +2,6 @@
 import Grid from "./ui/grid";
 import ContactSection from "./sections/contactSection";
 import FromSection from "./sections/fromSection";
-import AboutSection from "./sections/aboutSection";
 import ProjectSection from "./sections/projectSection";
 import HeroSection from "./sections/heroSection";
 import NewsSection from "./sections/newsSection";
@@ -13,7 +12,7 @@ import CvSection from "./sections/cvSection";
 
 export default function () {
     return (
-        <main className={"max-w-[1440px] mx-auto p-6 "}>
+        <main className={"max-w-[1440px] w-full mx-auto p-6 overflow-x-hidden flex justify-center "}>
             <Grid>
                 <ContactSection/>
                 <FromSection/>
@@ -21,7 +20,6 @@ export default function () {
                 <ProjectSection/>
                 <HeroSection/>
                 <NewsSection/>
-                <AboutSection/>
                 <CustomerSection/>
                 <TechStackSection/>
                 <FooterSection/>

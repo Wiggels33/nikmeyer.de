@@ -1,11 +1,11 @@
 import React from 'react';
-import {Container} from "@mui/material";
+import GeneralWrapper from "../ui/generalWrapper";
 
 const CustomerSection = () => {
     return (
-            <Container>
+            <GeneralWrapper>
                 <h2>Customer Section</h2>
-            </Container>
+            </GeneralWrapper>
     );
 };
 
