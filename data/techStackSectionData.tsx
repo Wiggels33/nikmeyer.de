@@ -1,3 +1,5 @@
+import {companyImage} from "../public/images";
+
 export interface ITechProps {
     tech: string;
     primary: boolean;
@@ -25,3 +27,28 @@ export const techStackSectionData: ITechStackSectionData = {
         {tech: 'PHP', primary: true}
     ],
 }
+
+
+export interface ITestimonialDataProps {
+    name: string;
+    company: string;
+    content: string;
+    image: string;
+}
+
+
+export const testimonialsData: ITestimonialDataProps[] = [
+    {
+        name   : 'Martina Mustermann',
+        company: 'Company 1',
+        content: 'Jorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.',
+        image  : companyImage.src,
+    },
+    {
+        name   : 'John Doe',
+        company: 'Company 2',
+        content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel tristique mauris, id lobortis tortor.',
+        image  : companyImage.src,
+    }
+
+]

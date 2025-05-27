@@ -2,7 +2,6 @@ import React from 'react';
 import GeneralWrapper from "../ui/generalWrapper";
 import {Box, Typography} from "@mui/material";
 import {techStackSectionData} from "../../data/techStackSectionData";
-import TechCard from "../ui/techCard";
 import TechCardContainer from "../ui/techCardContainer";
 import theme from "../../theme";
 
