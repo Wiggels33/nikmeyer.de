@@ -12,8 +12,8 @@ const TestimonialComponent = ({testimonial}: ITestimonialComponentProps) => {
     return (
         <Box sx={{
             padding: theme.spacing(1),
-            width: "100%",
-        }}>t
+            width  : "100%",
+        }}>
             <Box sx={{
                 display       : "flex",
                 justifyContent: "flex-start",
@@ -27,10 +27,13 @@ const TestimonialComponent = ({testimonial}: ITestimonialComponentProps) => {
                     flexDirection: "column",
                 }}>
                     <Typography variant={"body1"} color={theme.palette.common.white}>{testimonial.name}</Typography>
-                    <Typography variant={"body2"} color={theme.palette.common.white}>{testimonial.company}</Typography>
+                    <Typography variant={"body2"} color={'#414353'}>
+                        {testimonial.company}
+                    </Typography>
                 </Box>
             </Box>
-            <Typography variant={"body1"} color={theme.palette.common.white}>"{testimonial.content}"</Typography>
+            <Typography variant={"body1"} color={theme.palette.secondary.light}>"{testimonial.content}"</Typography>
+
         </Box>
     );
 };

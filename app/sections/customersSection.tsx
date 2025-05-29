@@ -6,7 +6,12 @@ import theme from "../../theme";
 
 const CustomerSection = () => {
     return (
-        <GeneralWrapper>
+        <GeneralWrapper
+        sx={{
+            [theme.breakpoints.down('xl')]: {
+                display: "none"
+            }
+        }}>
             <Box sx={{
                 zIndex        : 1,
                 display       : 'flex',

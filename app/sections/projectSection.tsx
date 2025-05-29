@@ -16,6 +16,8 @@ const ProjectSection = () => {
                     left    : 0,
                     height  : '240px',
                     overflow: 'hidden',
+                    borderRadius : theme.shape.borderRadius,
+
                     zIndex: 1,
                 }}>
                 <Box
