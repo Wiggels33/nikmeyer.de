@@ -8,9 +8,6 @@ const CustomerSection = () => {
     return (
         <GeneralWrapper
         sx={{
-            [theme.breakpoints.down('xl')]: {
-                display: "none"
-            }
         }}>
             <Box sx={{
                 zIndex        : 1,

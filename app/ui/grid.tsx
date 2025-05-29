@@ -37,21 +37,21 @@ const Grid = ({children}: IGridProps) => {
                 "1 / 3 / 2 / 4", // CvSection
                 "4 / 1 / 6 / 2", // ProjectSection
                 "2 / 2 / 4 / 4", // HeroSection
-                "5 / 2 / 6 / 4", // TechStackSection
-                "3 / 1 / 4 / 2", // ProjectSection
                 "4 / 2 / 5 / 4",
+                "3 / 1 / 4 / 2", // CvSection
+                "5 / 2 / 6 / 4", // TechStackSection
             ]
         } else {
             return [
-                "1 / 1 / 2 / 2",
-                "2 / 1 / 3 / 2",
-                "1 / 2 / 3 / 3",
-                "2 / 2 / 3 / 3",
-                "3 / 1 / 4 / 2",
-                "4 / 1 / 5 / 2",
-                "1 / 2 / 4 / 3",
-                "2 / 2 / 4 / 3",
-                "3 / 2 / 4 / 3",
+                "4 / 1 / 6 / 2", //ContactSection
+                "1 / 1 / 2 / 2", //Contact
+                "1 / 2 / 2 / 3", //CV
+                "5 / 2 / 7 / 3", // ProjectSection
+                "2 / 1 / 4 / 3", //HersoSection
+                "6 / 1 / 8 / 2",
+                "7 / 2 / 8 / 3",
+                "4 / 2 / 5 / 3", //ProjectSection
+                "8 / 1 / 9 / 3",
             ]
         }
     }
@@ -72,28 +72,39 @@ const Grid = ({children}: IGridProps) => {
     }, [isDesktop, isTablet]); //
 
     return (
-        <Box className={"" +
-            "grid grid-cols-4 grid-rows-[repeat(4,220px)]  gap-6 grid-temp-rows-8 xl:min-w-[100%]"}
+        <Box
 
              sx={{
-                 display: "grid",
-                 gridColumn: 4,
-                 gridRow: "repeat(4, 220px)",
-                 gap      : theme.spacing(6),
-                 gridTemplateRows: "repeat(8, 220px)",
-                 minWidth      : "324px",
-                 padding       : 0,
-                 [theme.breakpoints.up('xl')]: {
-                     gridTemplateColumns: 'repeat(3, 1fr)',
-                     gridTemplateRows:'repeat(5, 1fr)',
+                 display                       : "grid",
+                 gridColumn                    : 4,
+                 gridRow                       : "repeat(4, 220px)",
+                 gap                           : theme.spacing(4),
+                 gridTemplateRows              : "repeat(8, 220px)",
+                 minWidth                      : "324px",
+                 padding                       : 0,
+                 [theme.breakpoints.down('xl')]: {
+                     gridTemplateColumns: 'repeat(3, 324px)',
+                     gridTemplateRows   : 'repeat(5, 220px)',
+                 },
+                 [theme.breakpoints.down('lg')]: {
+                     gridTemplateColumns: 'repeat(2, 324px)',
+                     gridTemplateRows   : 'repeat(8, 220px)',
                  }
-
              }}
         >
             {React.Children.map(children, (child, index) => (
                 <>
-
+                    <Container
+                        disableGutters
+                        component={"section"}
+                        sx={{
+                            gridArea: gridAreas[index],
+                            height  : '100%',
+                            minWidth: '324px',
+                            padding : 0
+                        }}>
                         {child}
+                    </Container>
                 </>
             ))}
         </Box>

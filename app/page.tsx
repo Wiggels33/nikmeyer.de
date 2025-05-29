@@ -9,14 +9,19 @@ import CustomerSection from "./sections/customersSection";
 import FooterSection from "./sections/footerSection";
 import TechStackSection from "./sections/techStackSection";
 import CvSection from "./sections/cvSection";
+import {useTheme} from "@mui/system";
+import {useMediaQuery} from "@mui/material";
 
 export default function () {
+
+
+
     return (
         <main className={"max-w-[1440px] w-full mx-auto p-6 overflow-x-hidden flex justify-center "}>
             <Grid>
                 <ContactSection/>
                 <FromSection/>
-                <CvSection />
+                <CvSection/>
                 <ProjectSection/>
                 <HeroSection/>
                 <NewsSection/>
