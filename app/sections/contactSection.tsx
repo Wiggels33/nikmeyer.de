@@ -33,7 +33,7 @@ const ContactSection = () => {
         }));
     };
 
-    const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit = (event: React.FormEvent<HTMLDivElement>) => {
         event.preventDefault();
         console.log('Form submitted:', formData);
         // Here you would typically send the form data to your backend
@@ -67,8 +67,11 @@ const ContactSection = () => {
                     You got Any Questions
                 </Typography>
                 <FormControl
+                    onSubmit={(event) => {
+                        handleSubmit(event)}}
                     variant="standard"
-                    fullWidth>
+                    fullWidth
+                >
 
                     <TextField
                         margin="normal"

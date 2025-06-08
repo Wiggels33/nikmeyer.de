@@ -32,7 +32,7 @@ const TestimonialComponent = ({testimonial}: ITestimonialComponentProps) => {
                     </Typography>
                 </Box>
             </Box>
-            <Typography variant={"body1"} color={theme.palette.secondary.light}>"{testimonial.content}"</Typography>
+            <Typography variant={"body1"} color={theme.palette.secondary.light}>&quot;{testimonial.content}&quot;</Typography>
 
         </Box>
     );
