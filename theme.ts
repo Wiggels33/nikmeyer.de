@@ -3,19 +3,9 @@ import React from "react";
 
 import {
     ibmPlexMonoRegular,
-    ibmPlexMonoItalic,
-    ibmPlexMonoLight,
-    ibmPlexMonoLightItalic,
-    ibmPlexMonoMedium,
-    ibmPlexMonoMediumItalic,
-    ibmPlexMonoSemiBold,
-    ibmPlexMonoSemiBoldItalic,
+
     ibmPlexMonoBold,
-    ibmPlexMonoBoldItalic,
-    ibmPlexMonoExtraLight,
-    ibmPlexMonoExtraLightItalic,
-    ibmPlexMonoThin,
-    ibmPlexMonoThinItalic
+
 } from './public/fonts';
 
 // Erweitern Sie den Theme-Typ
@@ -45,7 +35,7 @@ const theme = createTheme({
         values: {
             xs: 0,
             sm: 372,
-            md: 743,
+            md: 734,
             lg: 1084,
             xl: 1440,
         },

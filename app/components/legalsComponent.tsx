@@ -2,7 +2,6 @@ import React from 'react';
 import {Box, List, ListItem} from "@mui/material";
 import Image from "next/image";
 import {Logo} from "../../public/images";
-import theme from "../../theme";
 
 const LegalsComponent = () => {
     return (

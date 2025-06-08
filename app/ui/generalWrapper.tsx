@@ -8,7 +8,7 @@ interface IGeneralWrapperProps {
     gridArea?: string;
 }
 
-const GeneralWrapper = ({sx, children, gridArea}: IGeneralWrapperProps) => {
+const GeneralWrapper = ({sx, children}: IGeneralWrapperProps) => {
     return (
         <Container sx={{
             position     : 'relative',

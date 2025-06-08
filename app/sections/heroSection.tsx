@@ -37,7 +37,7 @@ const HeroSection = () => {
                 <Typography
                     variant={"h2"}
                     color={"white"}
-                >I'm Niklas</Typography>
+                >I&apos;m Niklas</Typography>
                 <Typography
                     variant={"h3"}
                     color={"white"}
